@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Sports and Extra curricular</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lifestyle.css">
+    <link rel="stylesheet" href="lifestyle.js">
+    
+ <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+
+   <style>
+    
+        *{
+            margin: 0;
+            padding: 0;
+        }
+.timeline {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 700px;
+  position: relative;
+}
+.timeline__content-title {
+  font-weight: normal;
+  font-size: 66px;
+  margin: -10px 0 0 0;
+  transition: 0.4s;
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+  color: rgb(204, 116, 43);
+}
+.timeline__content-desc {
+  margin: 0;
+  font-size: 15px;
+  box-sizing: border-box;
+  color: rgb(204, 116, 43);
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: normal;
+  line-height: 25px;
+}
+.timeline:before {
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  margin-left: -1px;
+  content: "";
+  background:rgba(255, 255, 255, .07);
+}
+@media only screen and (max-width: 767px) {
+  .timeline:before {
+    left: 40px;
+  }
+}
+.timeline-item {
+  padding: 40px 0;
+  opacity: 0.3;
+  filter: blur(2px);
+  transition: 0.5s;
+  box-sizing: border-box;
+  width: calc(50% - 40px);
+  display: flex;
+  position: relative;
+  transform: translateY(-80px);
+}
+.timeline-item:before {
+  content: attr(data-text);
+  letter-spacing: 3px;
+  width: 100%;
+  position: absolute;
+  color: rgba(255, 255, 255, .5);
+  font-size: 13px;
+  font-family: 'Pathway Gothic One', sans-serif;
+  border-left: 2px solid rgba(255, 255, 255, .5);
+  top: 70%;
+  margin-top: -5px;
+  padding-left: 15px;
+  opacity: 0;
+  right: calc(-100% - 56px);
+}
+.timeline-item:nth-child(even) {
+  align-self: flex-end;
+}
+.timeline-item:nth-child(even):before {
+  right: auto;
+  text-align: right;
+  left: calc(-100% - 56px);
+  padding-left: 0;
+  border-left: none;
+  border-right: 2px solid rgba(255, 255, 255, .5);
+  padding-right: 15px;
+}
+.timeline-item--active {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0px);
+}
+.timeline-item--active:before {
+  top: 50%;
+  transition: 0.3s all 0.2s;
+  opacity: 1;
+}
+.timeline-item--active .timeline__content-title {
+  margin: -50px 0 20px 0;
+}
+@media only screen and (max-width: 767px) {
+  .timeline-item {
+    align-self: baseline !important;
+    width: 100%;
+    padding: 0 30px 150px 80px;
+  }
+  .timeline-item:before {
+    left: 10px !important;
+    padding: 0 !important;
+    top: 50px;
+    text-align: center !important;
+    width: 60px;
+    border: none !important;
+  }
+  .timeline-item:last-child {
+    padding-bottom: 40px;
+  }
+}
+.timeline__img {
+  max-width: 100%;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, .4);
+}
+.timeline-container {
+  width: 100%;
+  position: relative;
+  padding: 80px 0;
+  transition: 0.3s ease 0s;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.timeline-container:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+ background: rgba(0,0,0,0.6);
+  content: "";
+}
+.timeline-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+}
+.timeline-header__title {
+  color: rgb(204, 116, 43);
+  font-size: 58px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+  margin: 0;
+}
+.timeline-header__subtitle {
+  color: rgba(255, 255, 255, .5);
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 16px;
+  letter-spacing: 5px;
+  margin: 10px 0 0 0;
+  font-weight: normal;
+}
+.demo-footer {
+  padding: 60px 0;
+  text-align: center;
+}
+.demo-footer a {
+  color: #999;
+  display: inline-block;
+  font-family: Cardo;
+} 
+    </style> 
+</head>
+<body>
+     <div class="timeline-container" id="timeline-1">
+  <div class="timeline-header">
+    <h2 class="timeline-header__title">SPORTS AND EXTRA CURRICULAR</h2>
+    <h3 class="timeline-header__subtitle">Achievements</h3>
+  </div>
+  <div class="timeline">
+    <div class="timeline-item" data-text="">
+
+        <div class="timeline__content"><img class="timeline__img" src="/timeline/BKG1.jpg" />
+        </div>
+      </div>
+    
+    <div class="timeline-item" data-text="KENDRIYA VIDYALAYA SANGATHAN CRICKETS NATIONALS MEET">
+
+      <div class="timeline__content"><img class="timeline__img" src="/timeline/u.jpeg" />
+        <h2 class="timeline__content-title">2013</h2>
+        <p class="timeline__content-desc">Successfully qualified for the KVS Cricket nationals sports meet to represent the Uttar pradesh zone as an Allrounder for the team. </p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="KENDRIYA VIDYALAYA SANGATHAN CRICKETS NATIONALS MEET">
+      <div class="timeline__content"><img class="timeline__img" src="/timeline/Q.jpeg"/>
+        <h2 class="timeline__content-title">2014        </h2>
+        <p class="timeline__content-desc">Successfully qualified for the KVS Cricket nationals sports meet to represent the Uttar pradesh zone as an Allrounder for the team.Awarded as Man of the tournament for the sports meet. Also got a invitation from Chandigarh Cricket Academy.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="KENDRIYA VIDYALAYA SANGATHAN BASKETBALL REGIONALS MEETt">
+      <div class="timeline__content"><img class="timeline__img" src="/timeline/JJ.jpeg" />
+        <h2 class="timeline__content-title">2015</h2>
+        <p class="timeline__content-desc">Qualified for college basketball team and then played at KV IIT bombay for the clusters and defeated KV Panvel to qualify for Regionals. Played as power forward for the team.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="KENDRIYA VIDYALAYA SANGATHAN BADMINTON NATIONALS MEET">
+      <div class="timeline__content"><img class="timeline__img" src="/timeline/y.jpeg"/>
+        <h2 class="timeline__content-title">2016</h2>
+        <p class="timeline__content-desc">Played Nationals at Pune sports meet with other cluster teammates . Qualified for doubles mix and Men singles for the nationals held at Mysore. </p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="NATIONAL CHILDREN SCIENCE CONGRESS NATIONALIST">
+      <div class="timeline__content"><img class="timeline__img" src="/timeline/GW.jpeg"/>
+        <h2 class="timeline__content-title">2017</h2>
+        <p class="timeline__content-desc">Studied the effect of global warming, climate change and its effect on the physical World. Presented a report and project of the analysis of the subject meanwhile how can we overcome it.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="KENDRIYA VIDYALAYA SANGATHAN FOOTBALL NATIONALS MEET">
+      <div class="timeline__content"><img class="timeline__img" src="/timeline/GOAT1.jpeg"/>
+        <h2 class="timeline__content-title">2017</h2>
+        <p class="timeline__content-desc">Represented Mumbai region at the football nationals held at KV IIT Guwahati.Played as an Left wing forward for the Team. Currently playing for computer department team and college football team.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="KVS SOCIAL SCIENCE EXHIBITION NATIONALIST">
+      <div class="timeline__content"><img class="timeline__img" src="/timeline/WOMEN.jpeg"/>
+        <h2 class="timeline__content-title">2017</h2>
+        <p class="timeline__content-desc">Participated in English Debate and won Gold medal in the clusters and regionals social science exhibition held by KVS. Qualified for nationals and presented views on Women Empowerment.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="NATIONAL CHILDREN SCIENCE CONGRESS NATIONALIST">
+      <div class="timeline__content"><img class="timeline__img" src="/timeline/THINK.jpeg"/>
+        <h2 class="timeline__content-title">2018</h2>
+        <p class="timeline__content-desc">
+          Presented and talked about deforestation and how does it it affects us in numerous ways. Gave the counter points to help with soil erosion and forest depletion. 
+        </p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="KVS SOCIAL SCIENCE EXHIBITION NATIONALIST">
+      <div class="timeline__content"><img class="timeline__img" src="/timeline/M.png"/>
+        <h2 class="timeline__content-title">2018,2019</h2>
+        <p class="timeline__content-desc">Participated in Hindi Debate(2018) & Skit competition(2019) and won Gold medal in the clusters and regionals social science exhibition held by KVS(2018) and ONGC(2019). Qualified for nationals and presented views on social topics such as Racism, Equality and Empowerment.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="PROFFESIONAL E-SPORTS ATHLETE">
+      <div class="timeline__content"><img class="timeline__img" src="/timeline/ll.jpg"/>
+        <h2 class="timeline__content-title">2020-2023</h2>
+        <p class="timeline__content-desc">Played E-sports such as PUBGM ,BGMI ,CODM at a proffesional level at the T2 level. Also managed to win the T2 tournaments organised by various LAN gaming communities</p>
+      </div>
+    </div>
+  
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+ <script>
+    
+    (function($) {
+  $.fn.timeline = function() {
+    var selectors = {
+      id: $(this),
+      item: $(this).find(".timeline-item"),
+      activeClass: "timeline-item--active",
+      img: ".timeline__img"
+    };
+    selectors.item.eq(0).addClass(selectors.activeClass);
+    selectors.id.css(
+      "background-image",
+      "url(" +
+        selectors.item
+          .first()
+          .find(selectors.img)
+          .attr("src") +
+        ")"
+    );
+    var itemLength = selectors.item.length;
+    $(window).scroll(function() {
+      var max, min;
+      var pos = $(this).scrollTop();
+      selectors.item.each(function(i) {
+        min = $(this).offset().top;
+        max = $(this).height() + $(this).offset().top;
+        var that = $(this);
+        if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+          selectors.item.removeClass(selectors.activeClass);
+          selectors.id.css(
+            "background-image",
+            "url(" +
+              selectors.item
+                .last()
+                .find(selectors.img)
+                .attr("src") +
+              ")"
+          );
+          selectors.item.last().addClass(selectors.activeClass);
+        } else if (pos <= max - 40 && pos >= min) {
+          selectors.id.css(
+            "background-image",
+            "url(" +
+              $(this)
+                .find(selectors.img)
+                .attr("src") +
+              ")"
+          );
+          selectors.item.removeClass(selectors.activeClass);
+          $(this).addClass(selectors.activeClass);
+        }
+      });
+    });
+  };
+})(jQuery);
+
+$("#timeline-1").timeline();
+
+    </script> 
+</body>
+</html>
